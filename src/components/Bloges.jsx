@@ -4,7 +4,7 @@ import BookMark from "./BookMark";
 
 const Blogs = () => {
   const [bookMark, setBookMark] = useState([]);
-  const [markReed, setMarkReed] = useState(0);
+  let [markReed, setMarkReed] = useState(0);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     fetch("dummyData.json")
