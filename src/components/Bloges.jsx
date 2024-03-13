@@ -15,10 +15,12 @@ const Blogs = () => {
     const newBookMark = [...bookMark, Blog];
     setBookMark(newBookMark);
   };
-  const handleReed = (Blog) => {
+  const handleReed = (Blog, id) => {
     const newMarkReed = Blog.reading_time;
     markReed = newMarkReed + markReed;
     setMarkReed(markReed);
+    let remainingId = bookMark.filter((item) => item.id !== id);
+    setBookMark(remainingId);
   };
   return (
     <div>

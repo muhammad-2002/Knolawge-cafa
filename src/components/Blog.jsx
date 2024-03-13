@@ -8,6 +8,7 @@ const Blog = ({ blog, handleClick, handleReed }) => {
     posted_date,
     reading_time,
     hashtags,
+    id,
   } = blog;
 
   return (
@@ -38,7 +39,10 @@ const Blog = ({ blog, handleClick, handleReed }) => {
       <h1 className="text-2xl font-extrabold">{title}</h1>
       <p>{hashtags.map((tag) => `#${tag} ${" "}`)}</p>
 
-      <p onClick={() => handleReed(blog)} className="underline text-blue-700">
+      <p
+        onClick={() => handleReed(blog, id)}
+        className="underline text-blue-700"
+      >
         Mark as Read
       </p>
     </div>
